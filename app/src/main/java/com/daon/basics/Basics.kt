@@ -56,4 +56,32 @@ fun main(){
     result *= 2
     result %= 2
     print(result)
+
+    // 6. 비교 연산자
+    val isEqual = 5==3
+
+    println("isEqual is " + isEqual)
+    val isNotEqual = 5!=5
+    println("isNotEqual is $isNotEqual")
+
+    println("is5Greater3 ${5 > 3}")
+    println("is5LowerEqual3 ${5 >= 3}")
+    println("is5LowerEqual5 ${5 >= 5}")
+
+    // 대입 연산자
+    var myNum = 5
+    myNum += 3
+    println("myNum is $myNum")
+    myNum *= 4
+    println("myNum is $myNum")
+
+
+    // 증감 연산자
+    myNum++
+    println("myNum is $myNum")
+    // increments after use
+    println("myNum is ${myNum++}")
+    // increments before use
+    println("myNum is ${++myNum}")
+    println("myNum is ${--myNum}")
 }
