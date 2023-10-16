@@ -1,6 +1,6 @@
 package com.daon.basics
 
-fun main(){
+fun main() {
 
     // 1. 변수 그리고 var과 val의 차이점
 
@@ -18,19 +18,19 @@ fun main(){
 
     // Byte = 8bit, Short = 16 bit, Int = 32bit, Long = 64bit
 
-    val Byte : Byte = 1
-    val Short: Short  = 12
-    val Int : Int = 123
-    val Long : Long = 123456789
+    val Byte: Byte = 1
+    val Short: Short = 12
+    val Int: Int = 123
+    val Long: Long = 123456789
 
     // Float = 32bit, Double = 64bit
-    val Float : Float = 1.23F
-    val Double : Double = 1.23456789
+    val Float: Float = 1.23F
+    val Double: Double = 1.23456789
 
     // 3. 데이터 유형
 
     // Boolean = true 또는 false만 반환
-    var Sunny : Boolean = false
+    var Sunny: Boolean = false
 
     // Char = 모든 데이터가 들어갈 수 있지만 한 자리만 차지할 수 있음
     val StrChar = 'A'
@@ -58,10 +58,10 @@ fun main(){
     print(result)
 
     // 6. 비교 연산자
-    val isEqual = 5==3
+    val isEqual = 5 == 3
 
     println("isEqual is " + isEqual)
-    val isNotEqual = 5!=5
+    val isNotEqual = 5 != 5
     println("isNotEqual is $isNotEqual")
 
     println("is5Greater3 ${5 > 3}")
@@ -85,61 +85,60 @@ fun main(){
     println("myNum is ${++myNum}")
     println("myNum is ${--myNum}")
 
-    fun main(){
-        // Control Flows
-        // If Statements
-        var age = 17
-        if(age >= 21){
-            print("now you may drink in the US")
-        }
-        // Else If Statement - only executed if the if statement is not true
-        else if(age >= 18){
-            print("now you may vote")
-        }
-        // Else If Statement - only executed if the foregoing else if statement is not true
-        else if (age >= 16){
-            print("you now may drive")
-        }
-        // else is only executed if all of the foregoing statements weren't true
-        else{
-            print("you're too young")
-        }
+    // Control Flows
+    // If Statements
+    var age = 17
+    if (age >= 21) {
+        print("now you may drink in the US")
+    }
+    // Else If Statement - only executed if the if statement is not true
+    else if (age >= 18) {
+        print("now you may vote")
+    }
+    // Else If Statement - only executed if the foregoing else if statement is not true
+    else if (age >= 16) {
+        print("you now may drive")
+    }
+    // else is only executed if all of the foregoing statements weren't true
+    else {
+        print("you're too young")
+    }
 
-        // Kotlin’s "when" expression is the replacement of the switch statement
-        // from other languages like C, C++, and Java.
-        // It is compact and more powerful than switch statements.
-        var season = 3
-        when(season) {
-            1 -> println("Spring")
-            2 -> println("Summer")
-            3 -> println("Fall")
-            4 -> println("Winter")
-            else -> println("Invalid Season")
-        }
-        var month = 3
-        when(month) {
-            1,2,3 -> println("Spring")
-            in 4..6 -> println("Summer")
-            in 7..9 -> println("Fall")
-            in 10..12 -> println("Winter")
-            else -> println("Invalid Season")
-        }
+    // Kotlin’s "when" expression is the replacement of the switch statement
+    // from other languages like C, C++, and Java.
+    // It is compact and more powerful than switch statements.
+    var season = 3
+    when (season) {
+        1 -> println("Spring")
+        2 -> println("Summer")
+        3 -> println("Fall")
+        4 -> println("Winter")
+        else -> println("Invalid Season")
+    }
+    var month = 3
+    when (month) {
+        1, 2, 3 -> println("Spring")
+        in 4..6 -> println("Summer")
+        in 7..9 -> println("Fall")
+        in 10..12 -> println("Winter")
+        else -> println("Invalid Season")
+    }
 
-        // challenge - translate the if statement with the age to a when expression
-        when(age){
-            // with the !in it's the same as saying not in ...
-            !in 0..20  -> print("now you may drink in the US")
-            in 18..20  -> print("now you may vote")
-            16,17 -> print("you now may drive")
-            else -> print("you're too young")
-        }
+    // challenge - translate the if statement with the age to a when expression
+    when (age) {
+        // with the !in it's the same as saying not in ...
+        !in 0..20 -> print("now you may drink in the US")
+        in 18..20 -> print("now you may vote")
+        16, 17 -> print("you now may drive")
+        else -> print("you're too young")
+    }
 
-        var x : Any = 13.37
-        when(x) {
-            is Int -> println("$x is an Int")
-            !is Double -> println("$x is not Double")
-            is String -> println("$x is a String")
-            else -> println("$x is none of the above")
-        }
+    var x: Any = 13.37
+    when (x) {
+        is Int -> println("$x is an Int")
+        !is Double -> println("$x is not Double")
+        is String -> println("$x is a String")
+        else -> println("$x is none of the above")
     }
 }
+
