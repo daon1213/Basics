@@ -200,6 +200,52 @@ fun main() {
     println(addUp(5,3))
     println(avg(3.2,5.3))
 
+    var name: String = "Denis"
+// name = null // Compilation Error
+
+    var nullableName: String? = "Denis"
+    nullableName = null // Works
+
+// Here name cannot/must not be null
+    val len = name.length
+    val upper = name.toLowerCase()
+
+
+// So how can we solve this? We could do a null check before hand
+
+    val nullableName2: String? = "Denis"
+
+    if(nullableName2 != null) {
+        println("Hello, ${nullableName2.toLowerCase()}.")
+        println("Your name is ${nullableName2.length} characters long.")
+    } else {
+        println("Hello, Guest")
+    }
+
+    nullableName2?.toLowerCase()
+
+// This is the same as:
+    if(nullableName2 != null)
+        nullableName2.toLowerCase()
+    else
+        null
+
+    val nullableName3: String? = null
+
+    println(nullableName3?.toLowerCase()) // prints null
+    println(nullableName3?.length) // prints null
+
+    val nullableName4: String? = null
+
+    nullableName4?.let { println(it.toLowerCase()) }
+    nullableName4?.let { println(it.length) }
+
+    val name2 = nullableName4 ?: "Guest"
+
+    val nullableName5: String? = null
+    nullableName5!!.toLowerCase() // Results in NullPointerException
+
+
 }
 
 // The syntax of a function - fun stands for function
